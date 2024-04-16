@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sentiment Analysis</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <style>
+        body{
+            background: rgb(143,142,233);
+            background: radial-gradient(circle, rgba(143,142,233,1) 0%, rgba(148,233,228,1) 100%);
+        }
+
+        h1{
+            /* color: rgb(18, 36, 239); */
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 20px;
+            margin-right: 17em;
+        }
+        .container{
+            background-color: rgba(172, 216, 255, 0.471);
+            padding: 20px;
+            border-radius: 23px;
+        }
+        .form-control{
+            background-color: rgba(255, 255, 255, 0.485);
+
+        }
+        label{
+            font-size: x-large;
+            color: rgb(94, 11, 103);
+        }
+        </style>
+  </head>
+  <body>
+    <div class="container mt-5 justify-content-center">
+      <h1>Sentiment Analysis</h1>
+      <form method="POST" action="/analyze_sentiment">
+        <div class="form-group">
+          <label for="text">Enter text:</label>
+          <textarea
+            class="form-control"
+            id="text"
+            name="text"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-hover">
+            Analyze
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
