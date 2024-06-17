@@ -1,13 +1,10 @@
-from flask import Flask, render_template, request, jsonify
 import joblib
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import make_pipeline
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 # Load the trained model
-model = joblib.load('sentiment_analysis_model.joblib')
+model = joblib.load('movie_review_classifier.pkl')
 
 
 # Define a route for the home page
